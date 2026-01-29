@@ -107,13 +107,13 @@ for filename in os.listdir("."):
         print(f"Skipping {filename}: could not find required CSV headers.")
         continue
 
-    # ---- Team results block (optional for this output, but we parse safely) ----
-    # Team block lines start at team_header_idx and go up to the blank line before indiv_header_idx
-    team_block_lines = []
-    for i in range(team_header_idx, indiv_header_idx):
-        if lines[i].strip() == "" and i > team_header_idx:
-            break
-        team_block_lines.append(lines[i])
+    # # ---- Team results block (optional for this output, but we parse safely) ----
+    # # Team block lines start at team_header_idx and go up to the blank line before indiv_header_idx
+    # team_block_lines = []
+    # for i in range(team_header_idx, indiv_header_idx):
+    #     if lines[i].strip() == "" and i > team_header_idx:
+    #         break
+    #     team_block_lines.append(lines[i])
 
     # ---- Individual results block ----
     indiv_block_lines = [line for line in lines[indiv_header_idx:] if line.strip() != ""]
