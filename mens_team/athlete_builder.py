@@ -328,7 +328,9 @@ def generate_runner_page(data) -> str:
 <body>
 <header>
   <div class="header-content">
-    <img src="{SKYLINE_LOGO}" alt="Skyline High School logo">
+    <a href="home_page.html">
+        <img src="{SKYLINE_LOGO}" alt="Skyline High School logo">
+    </a>
     <div class="header-text">
       <h1>{name}</h1>
       <p>Grade: {grade} &nbsp; <a href="{profile_url}">Athletic.net Profile</a></p>
