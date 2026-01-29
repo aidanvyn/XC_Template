@@ -328,7 +328,7 @@ def generate_runner_page(data) -> str:
 <body>
 <header>
   <div class="header-content">
-    <a href="home_page.html">
+    <a href="../home_page.html">
         <img src="{SKYLINE_LOGO}" alt="Skyline High School logo">
     </a>
     <div class="header-text">
