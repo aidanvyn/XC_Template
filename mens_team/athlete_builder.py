@@ -338,7 +338,7 @@ def generate_runner_page(data) -> str:
 
 <main>
   <p>{bio}</p>
-  <img src="{profile_img}" alt="{name} profile photo">
+  <img src="https://umsicomplexwebdesign.github.io/xc_data/images/profiles{athlete_id}" alt="{name} profile photo">
 </main>
 
 {tables}
