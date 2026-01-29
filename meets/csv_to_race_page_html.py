@@ -143,6 +143,7 @@ def pick_meet_photo_local(repo_root: str, meet_id: Optional[str]) -> Optional[st
 
 def build_race_page_html(meet: Dict, repo_root: Optional[str] = None, include_team_table: bool = False) -> str:
     """Generate HTML in the 'race_page.html' style (header hero + summary + Skyline results table)."""
+    include_team_table = False
     css_reset = f"{BASE_URL}css/reset.css"
     css_style = f"{BASE_URL}css/style.css"
 
