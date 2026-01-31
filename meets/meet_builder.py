@@ -187,7 +187,7 @@ for filename in os.listdir("."):
 
 <header>
   <div class="header-content">
-    <a href="../home_page.html">
+    <a href="../index.html">
         <img src="{SKYLINE_LOGO}" alt="Skyline High School logo">
     </a>
     <div class="header-text">
