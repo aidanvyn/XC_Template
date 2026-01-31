@@ -238,10 +238,21 @@ for meet in sorted_keys:
     for r in skyline_runners[:4]:
         name = safe_get(r, "Name")
         time = safe_get(r, "Time")
-        # print(name, time)
-        home_html += f"""
+        athlete_id = safe_get(r, "Profile Pic").replace('.jpg', '').replace('.jpeg', '')
+
+        if name and athlete_id:
+            athlete_page_link = f"../mens_team/{name}{athlete_id}.html"
+            home_html += f"""
+            <dt><a href="{athlete_page_link}">{name}</a></dt><dd>{time}</dd>
+            """
+        else:
+            home_html += f"""
             <dt>{name}</dt><dd>{time}</dd>
-        """
+            """
+        # print(name, time)
+        #home_html += f"""
+            #<dt>{name}</dt><dd>{time}</dd>
+        #"""
     home_html += f"""
         </dl>
         
