@@ -184,8 +184,8 @@ for filename in os.listdir(MEETS_DIR):
         </tr>"""
 
     base = filename.replace(".csv", "")
-    safe_name = slugify_filename(base)
-    race_html = f"{MEETS_DIR}/{safe_name}.html"
+    #safe_name = slugify_filename(base)#
+    race_html = f"{MEETS_DIR}/{base}_race_page.html"
 
     recent_races[meet_name] = [
         meet_date,
