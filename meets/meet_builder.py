@@ -155,11 +155,18 @@ for filename in os.listdir("."):
             time = safe_get(r, "Time")
             place = ordinal(safe_get(r, "Place"))
             grade = safe_get(r, "Grade")
-            athlete_link = safe_get(r, "Athlete Link", "#")
+            athlete_id = safe_get(r, "Profile Pic").replace('.jpg', '').replace('.jpeg', '')
+
+            if name and athlete_id:
+                #athlete_page_link = f"{name}{athlete_id}.html"#
+                athlete_page_link = f"../mens_team/{name}{athlete_id}.html"
+
+            else:
+                athlete_page_link = "#"
 
             skyline_rows_html += f"""
         <tr>
-          <td><a href="{athlete_link}">{name}</a></td>
+          <td><a href="{athlete_page_link}">{name}</a></td>
           <td>{time}</td>
           <td>{place}</td>
           <td>{grade}</td>
