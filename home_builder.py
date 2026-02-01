@@ -242,7 +242,7 @@ for meet in sorted_keys:
         athlete_id = safe_get(r, "Profile Pic").replace('.jpg', '').replace('.jpeg', '')
 
         if name and athlete_id:
-            athlete_page_link = f"../mens_team/{name}{athlete_id}.html"
+            athlete_page_link = f"mens_team/{name}{athlete_id}.html"
             home_html += f"""
             <dt><a href="{athlete_page_link}">{name}</a></dt><dd>{time}</dd>
             """
