@@ -321,7 +321,7 @@ def generate_runner_page(data) -> str:
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{name}</title>
-  <link rel="stylesheet" href="{CSS_RESET}">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="{CSS_STYLE}">
 </head>
 

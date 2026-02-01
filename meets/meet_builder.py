@@ -186,7 +186,7 @@ for filename in os.listdir("."):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{meet_name}</title>
-  <link rel="stylesheet" href="{CSS_RESET}">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="{CSS_STYLE}">
 </head>
 
