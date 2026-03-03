@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skyline Cross Country Home Page</title>
 </head>
@@ -688,23 +687,6 @@
     
   </ul>
 </section>
-
-<script>
-  const toggleButton = document.querySelector('.roster-toggle');
-  const rosterList = document.getElementById('roster-list');
-
-  toggleButton.addEventListener('click', () => {
-    const isHidden = rosterList.hasAttribute('hidden');
-
-    if (isHidden) {
-      rosterList.removeAttribute('hidden');
-      toggleButton.setAttribute('aria-expanded', 'true');
-    } else {
-      rosterList.setAttribute('hidden', '');
-      toggleButton.setAttribute('aria-expanded', 'false');
-    }
-  });
-</script>
 
 <footer>
     <p>All data gathered from Garrett's race spreadsheet. Thanks Garrett!</p>

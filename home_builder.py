@@ -11,7 +11,7 @@ from datetime import datetime
 BASE_URL = "https://umsicomplexwebdesign.github.io/xc_data"
 
 CSS_RESET = f"{BASE_URL}/css/reset.css"
-CSS_STYLE = f"{BASE_URL}/css/style.css"
+CSS_STYLE = f"../css/style.css"
 
 SKYLINE_LOGO = (
     "https://resources.finalsite.net/images/f_auto,q_auto/"
@@ -197,7 +197,7 @@ home_html = f"""<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="../css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skyline Cross Country Home Page</title>
 </head>
