@@ -99,6 +99,14 @@ def safe_get(d, key, default=""):
     v = d.get(key, default)
     return "" if v is None else str(v)
 
+def safe_filename(path):
+    """
+    Replace spaces with underscores in the filename.
+    """
+    p_no_ext = os.path.splitext(path)[0]
+    dir_part, file_part = os.path.split(p_no_ext)
+    file_part = file_part.replace(" ", "_")
+    return os.path.join(dir_part, file_part + OUTPUT_EXT)
 
 # =========================
 # Parsing athlete CSV
@@ -389,7 +397,8 @@ def main():
                 data = parse_athlete_csv(csv_path)
                 html = generate_runner_page(data)
 
-                out_path = os.path.splitext(csv_path)[0] + OUTPUT_EXT
+                ###out_path = os.path.splitext(csv_path)[0] + OUTPUT_EXT
+                out_path = safe_filename(csv_path)
                 with open(out_path, "w", encoding="utf-8") as f:
                     f.write(html)
 
