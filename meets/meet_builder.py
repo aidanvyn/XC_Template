@@ -78,6 +78,13 @@ def safe_get(row_dict: dict, key: str, default: str = "") -> str:
     val = row_dict.get(key, default)
     return "" if val is None else str(val)
 
+def underscore_name(name: str) -> str:
+    """
+    Convert a name like 'Matthew Guikema' or 'Lila Edison' to 'Matthew_Guikema'.
+    For names with more than two parts (e.g., 'Mary Jane Smith'), joins all parts with underscores.
+    """
+    parts = name.split()
+    return "_".join(parts)
 
 # =========================
 # Main: process all CSVs in current folder
@@ -158,9 +165,8 @@ for filename in os.listdir("."):
             athlete_id = safe_get(r, "Profile Pic").replace('.jpg', '').replace('.jpeg', '')
 
             if name and athlete_id:
-                #athlete_page_link = f"{name}{athlete_id}.html"#
-                athlete_page_link = f"../mens_team/{name}{athlete_id}.html"
-
+                underscored_name = underscore_name(name)
+                athlete_page_link = f"../mens_team/{underscored_name}{athlete_id}.html"
             else:
                 athlete_page_link = "#"
 
