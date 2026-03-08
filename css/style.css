@@ -1,8 +1,10 @@
+/* FONTS AND MARGINS */
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
 }
 
+/* Color - basic */
 :root {
   --bg-main: rgb(146, 221, 248);
   --bg-card: white;
@@ -17,6 +19,7 @@
   --shadow-strong: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.12);
 }
 
+/* Color - dark mode */
 .dark-mode {
   --bg-main: #1e1f24;
   --bg-card: #2a2c33;
@@ -31,6 +34,7 @@
   --shadow-strong: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.6);
 }
 
+/* Color - high contrast */
 .high-contrast {
   --bg-main: #000000;
   --bg-card: #000000;
@@ -45,6 +49,7 @@
   --shadow-strong: none;
 }
 
+/* All button effects */
 a, button {
     transition: all 0.2s ease;
 }
@@ -333,7 +338,6 @@ main img:hover {
 }
 
 /* Dark Mode Styling */
-
 #theme-toggle {
   grid-column:  1;
   grid-row: 3;
@@ -409,3 +413,35 @@ main img:hover {
 #contrast-toggle:hover {
   background-color: var(--bg-accent-strong);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.jump-button {
+  grid-column: 1 / -1;
+  margin: 0.5rem auto 0 auto;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+
+  background-color: var(--bg-accent);
+  color: var(--text-main);
+
+  display: inline-block;
+}
+
+.jump-button:hover,
+.jump-button:focus {
+  background-color: var(--bg-accent-strong);
+}
+
+/*
+AI STATEMENT:
+  AI was used in generating ideas on how to style this page, 
+  and set up foundations of how to efficienty get styling to work across pages.
+
+  interesting note:
+  It would often give code and colors that did not pass accessibility checkers.
+*/
