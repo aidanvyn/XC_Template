@@ -437,6 +437,41 @@ html {
   background-color: var(--bg-accent-strong);
 }
 
+/* Reduced Motion Accessibility - per rubric */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  article:hover {
+    transform: none;
+    box-shadow: var(--shadow);
+  }
+
+  article dt a:active {
+    transform: none;
+  }
+
+  article p a:active {
+    transform: none;
+  }
+
+  .roster-toggle:active {
+    transform: none;
+  }
+
+  main img:hover {
+    transform: none;
+    box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.15);
+  }
+
+}
+
 /*
 AI STATEMENT:
   AI was used in generating ideas on how to style this page, 
