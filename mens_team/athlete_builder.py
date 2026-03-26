@@ -329,8 +329,9 @@ def generate_runner_page(data) -> str:
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{name}</title>
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link href="../dist/css/lightbox.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -348,14 +349,19 @@ def generate_runner_page(data) -> str:
 
 <main>
   <p>{bio}</p>
+
+  <a href = "{profile_img}" data-lightbox="{name}{grade}" data-title="{name} Running" data-alt="{name} profile photo">
   <img src="{profile_img}" alt="{name} profile photo">
+  </a>
 </main>
 
 {tables}
 
 <footer>
-  <p>All data gathered from the team’s race spreadsheet.</p>
+  <p>All data gathered from the team's race spreadsheet.</p>
 </footer>
+
+<script src="../dist/js/lightbox-plus-jquery.js"></script>
 </body>
 </html>
 """
