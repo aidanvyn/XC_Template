@@ -363,6 +363,12 @@ main img:hover {
 
 #theme-toggle:hover {
   background-color: var(--bg-accent-strong);
+  color: var(--text-main);
+}
+
+.high-contrast #theme-toggle:hover {
+  background-color: #ffff00;
+  color: #000000;
 }
 
 /* High contrast mode */
@@ -382,21 +388,22 @@ main img:hover {
 }
 
 .high-contrast p a{
-  color:#000000;
+  color: #000000;
 }
 
 /* Buttons in high contrast */
 .high-contrast button {
   background-color: #000000;
-  color: #ffffff;
   border: 0.2rem solid #ffffff;
 }
 
-/* Hover state */
-.high-contrast button:hover,
-.high-contrast a:hover {
+.high-contrast #contrast-toggle:hover {
   background-color: #ffff00;
   color: #000000;
+}
+
+.high-contrast a:hover {
+    color: var(--bg-accent);
 }
 
 .high-contrast p a:hover{
