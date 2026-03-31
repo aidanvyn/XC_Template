@@ -198,10 +198,12 @@ article p a:active {
 .roster-section {
     text-align: center;
     padding: 1.5rem 1rem;
+    background-color: var(--text-muted);
 }
 
 .roster-toggle {
-  background-color: lightblue;
+  background-color: var(--bg-main);
+  color: var(--text-main);
   border: none;
   padding: 0.75em 1.5em;
   border-radius: 2rem;
@@ -210,13 +212,14 @@ article p a:active {
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.roster-toggle:hover,
-.roster-toggle:focus {
-  background-color: #5aa9c9;
+.roster-toggle:hover {
+  background-color: var(--bg-accent-strong);
+  color: var(--text-main);
 }
 
 .roster-toggle:active {
   transform: scale(0.98);
+  color: var(--text-main);
 }
 
 .roster-list {
@@ -233,17 +236,18 @@ article p a:active {
 .roster-list a {
   display: block;
   padding: 0.75em 1em;
-  background-color: #f4fbff;
+  background-color: var(--bg-soft);
+  color: var(--text-main);
   border-radius: 0.75rem;
   text-decoration: none;
-  color: inherit;
   transition: background-color 0.2s ease;
 }
 
 /* Hover Effect */
 .roster-list a:hover,
 .roster-list a:focus {
-  background-color: lightblue;
+  background-color: var(--bg-main);
+  color: var(--text-main);
 }
 
 /* Footer */
@@ -493,6 +497,13 @@ html {
     gap: 10px;
   }
 
+   .athlete-content {
+    grid-column: 1 / -1;
+    max-width: 700px;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
   main h2 {
     grid-column: 1/-1;
   }
@@ -504,7 +515,15 @@ html {
     gap: 20px;
   }
   
+  .athlete-content {
+    grid-column: 1 / -1;
+    max-width: 700px;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
   /*
+  Expiremnt with moving stuff around
   main article:nth-child(3n) {
     position: relative;
     top: 20rem;

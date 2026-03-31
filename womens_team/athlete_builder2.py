@@ -348,10 +348,12 @@ def generate_runner_page(data) -> str:
 </header>
 
 <main>
+  <div class="athlete-content">
   <p>{bio}</p>
   <a href = "{profile_img}" data-lightbox="{name}{grade}" data-title="{name} Running" data-alt="{name} profile photo">
   <img src="{profile_img}" alt="{name} profile photo">
   </a>
+  </div>
 </main>
 
 {tables}
