@@ -497,7 +497,7 @@ html {
     gap: 10px;
   }
 
-   .athlete-content {
+  main .athlete-content {
     grid-column: 1 / -1;
     max-width: 700px;
     margin: 2rem auto;
@@ -507,6 +507,11 @@ html {
   main h2 {
     grid-column: 1/-1;
   }
+
+  .race-main {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -515,7 +520,7 @@ html {
     gap: 20px;
   }
   
-  .athlete-content {
+  main .athlete-content {
     grid-column: 1 / -1;
     max-width: 700px;
     margin: 2rem auto;
@@ -533,6 +538,12 @@ html {
   main h2 {
     grid-column: 1/-1;
   }
+
+  .race-main {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
 }
 
 /*
